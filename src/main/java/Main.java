@@ -1,22 +1,17 @@
 public class Main {
+
     public static void main(String[] args) {
         Cat coco = new Cat("coco", 14);
-        Dog winston = new Dog("winston", 7, "Daxton");
-        Toy curiousGeorge = new Toy("ABC Corp");
+        Dog max = new Dog("max", 5, "daxton");
+        Rabbit rabbit = new Rabbit("snowball", 3, "black");
+        Toy robot = new Toy("Curious George");
 
-        Toy legoCar = new Toy("lego truck");
+        Toy legoCar  = new Toy("Lego Truck");
 
-        Animal[] animals = new Animal[2];
-        animals[0] = coco;
-        animals[1] = winston;
-
-        for (Animal animal : animals) {
-            animal.play();
+        Action[] animals = new Action[]{coco, max, rabbit, robot};
+        for (Action friend : animals) {
+            friend.play(legoCar);
         }
-
-        curiousGeorge.play();
-        coco.play();
-        winston.play();
 
     }
 }

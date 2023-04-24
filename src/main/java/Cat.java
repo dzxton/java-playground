@@ -4,15 +4,16 @@
 
 public class Cat extends Animal{
 
-    // setter
-    public void setName (String name) {
-        this.name = name;
+    public Cat(String name, int age) {
+        super(name, age);
     }
 
-    void play() {
+    @Override
+    public void play() {
         System.out.println("Cat " + name + " jumps on the table");
     }
+    @Override
     public void play(Toy toy) {
-        System.out.println("Cat " + name + " is playing the toy " + toy);
+        System.out.println("Cat " + name + " is playing with the toy " + toy);
     }
 }
